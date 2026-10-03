@@ -1,0 +1,12 @@
+#Gradle build
+.gradle/
+build/
+
+#IDE files
+.idea/
+*.iml
+.vscode/
+bin/
+
+#Secrets
+.env
