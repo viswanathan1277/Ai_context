@@ -1,29 +1,41 @@
-plugins{
+plugins {
     id 'java'
     id 'application'
 }
-group ='com.example'
-version ='1.0-SNAPSHOT'
 
-repositories{
+group = 'com.example'
+version = '1.0-SNAPSHOT'
+
+repositories {
     mavenCentral()
 }
+
 dependencies {
-    // Lightweight web framework
-    implementation 'io.javalin:javalin:6.1.3'
     implementation 'org.slf4j:slf4j-simple:2.0.12'
     implementation 'com.fasterxml.jackson.core:jackson-databind:2.17.0'
     
     // MySQL connector for future DB configuration
     implementation 'com.mysql:mysql-connector-j:8.3.0'
+
+        // BCrypt for password hashing
+    implementation 'org.mindrot:jbcrypt:0.4'
+
+    // JUnit for testing
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.10.2'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.10.2'
+
 }
 
-application{
-    mainClass='com.example.App'
+application {
+    mainClass = 'com.example.App'
 }
 
-java{
+java {
     sourceCompatibility = JavaVersion.VERSION_17
     targetCompatibility = JavaVersion.VERSION_17
+}
+
+test {
+    useJUnitPlatform()
 }
 

@@ -3,15 +3,37 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <title>General Web Application</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration</title>
     <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
-    <h1>Welcome To the web page</h1>
-    <p>It is a framework free web application</p>
-    <button id="testBtn">Test JavaScript</button>
+    <div class="container" style="max-width: 400px; margin: 50px auto; font-family: sans-serif;">
+        <h2>Register</h2>
+        <form id="registrationForm">
+            <div style="margin-bottom: 15px;">
+                <label for="name" style="display:block;">Name:</label>
+                <input type="text" id="name" required style="width: 100%; padding: 8px;">
+            </div>
+            <div style="margin-bottom: 15px;">
+                <label for="phone" style="display:block;">Phone:</label>
+                <input type="tel" id="phone" required style="width: 100%; padding: 8px;">
+            </div>
+            <div style="margin-bottom: 15px;">
+                <label for="email" style="display:block;">Email:</label>
+                <input type="email" id="email" required style="width: 100%; padding: 8px;">
+            </div>
+            <div style="margin-bottom: 15px;">
+                <label for="password" style="display:block;">Password:</label>
+                <input type="password" id="password" required style="width: 100%; padding: 8px;">
+            </div>
+            <button type="submit"
+                style="width: 100%; padding: 10px; background-color: #007bff; color: white; border: none; cursor: pointer;">Submit</button>
+        </form>
+        <div id="message" style="margin-top: 20px; font-weight: bold; text-align: center;"></div>
+    </div>
+
     <script src="/js/main.js"></script>
 </body>
 
